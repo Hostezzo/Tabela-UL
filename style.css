@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#0b0d10; --panel:#12161b; --panel2:#171c22; --line:#28303a;
+  --text:#f3f5f7; --muted:#9ca6b2; --accent:#d9ff3f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+.hero{padding:64px 0 48px;border-bottom:1px solid var(--line);background:
+radial-gradient(circle at 80% 0%,rgba(217,255,63,.10),transparent 30%),#0b0d10}
+.eyebrow,.kicker{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+h1{font-size:clamp(38px,7vw,72px);line-height:.95;margin:10px 0 14px;letter-spacing:-.05em}
+.hero p{color:var(--muted);margin:0;font-size:15px}
+.section{padding:42px 0 0}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+h2{margin:5px 0 0;font-size:28px;letter-spacing:-.03em}
+.pill{border:1px solid var(--line);color:var(--muted);padding:7px 10px;border-radius:999px;font-size:12px}
+.table-card,.round-card,.team-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.table-scroll{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:13px 12px;border-bottom:1px solid var(--line);text-align:center;font-size:13px}
+th{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;background:#0f1318}
+th:nth-child(2),td:nth-child(2){text-align:left}
+tbody tr:first-child{background:rgba(217,255,63,.045)}
+tbody tr:last-child td{border-bottom:0}
+.rank{color:var(--muted);width:38px}
+.team-name{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
+.badge{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:9px;font-weight:800;color:#fff;flex:none}
+.united{background:#c8102e}.tottenham{background:#132257}.arsenal{background:#db001b}
+.chelsea{background:#034694}.city{background:#6cabdd;color:#07121d}.liverpool{background:#c8102e}
+.pts{font-weight:800}
+.hint{margin:0;padding:12px 15px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
+code{font-family:ui-monospace,SFMono-Regular,monospace;color:#d7dde4}
+.rounds{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.round-card{padding:17px}
+.round-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.round-number{font-weight:800}.round-meta{color:var(--muted);font-size:11px}
+.match{display:grid;grid-template-columns:1fr 44px 1fr;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:12px}
+.match:first-of-type{border-top:0}
+.match .home{text-align:right;font-weight:600}.match .away{font-weight:600}
+.score{background:#0b0e12;border:1px solid var(--line);border-radius:8px;min-height:30px;display:grid;place-items:center;font-weight:800}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-bottom:52px}
+.team-card{padding:18px}
+.team-top{display:flex;align-items:center;gap:12px;margin-bottom:15px}
+.team-logo{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}
+.team-title{font-weight:800}.manager{color:var(--muted);font-size:11px;margin-top:3px}
+.count{margin-left:auto;font-size:11px;color:var(--muted)}
+.roster{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.roster li{background:var(--panel2);border-radius:7px;padding:7px 8px;color:#cbd1d8;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:11px}
+@media(max-width:800px){
+  .rounds{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 20px,1080px)}.hero{padding:45px 0 35px}
+  .team-grid{grid-template-columns:1fr}.section{padding-top:32px}
+  .section-title{align-items:start}.pill{display:none}
+}
